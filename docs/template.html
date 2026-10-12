@@ -188,6 +188,7 @@ $T_LEDGER
   <li>We did not test whether long chats make answers worse. Published studies report that accuracy drops as context grows: <a href="https://www.trychroma.com/research/context-rot">Context Rot</a> (Chroma, 2025), <a href="https://arxiv.org/abs/2307.03172">Lost in the Middle</a> (Liu et al., 2023) and <a href="https://arxiv.org/abs/2404.06654">RULER</a> (Hsieh et al., 2024).</li>
   <li>The Brainstem saves tokens partly by forgetting raw tool output. A later question that needs that output must ask for it again.</li>
   <li>The Brainstem does not report token usage on <code>/chat</code>, so the bench loads a 15-line counter into its Python process. Claude Code and Copilot CLI report usage themselves.</li>
+  <li>Every Brainstem in this study ran on the same machine as the bench. We did not measure a Brainstem hosted in the cloud; it should send the same tokens for the same agents, but its time per answer will include the network.</li>
   <li>The "as used" measurements describe one person's setup. Yours will differ; the bench measures it in one command.</li>
 </ul>
 
