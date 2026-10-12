@@ -1,0 +1,110 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, and the total overpaid is $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15290,
+   15904,
+   16110
+  ],
+  "input_tokens": 47304,
+  "output_tokens": 393,
+  "cost_usd": 0.00209508,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 4.7
+ },
+ {
+  "answer": "We would charge $539,531.05 in late fees as of 2026-09-30, across 1,933 charged invoices.",
+  "calls": 3,
+  "context_per_call": [
+   16284,
+   17012,
+   17252
+  ],
+  "input_tokens": 50548,
+  "output_tokens": 390,
+  "cost_usd": 0.00301308,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 4.7
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   17437,
+   18209,
+   18455
+  ],
+  "input_tokens": 54101,
+  "output_tokens": 374,
+  "cost_usd": 0.0039702,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 4.3
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1.",
+  "calls": 3,
+  "context_per_call": [
+   18585,
+   19267,
+   19487
+  ],
+  "input_tokens": 57339,
+  "output_tokens": 302,
+  "cost_usd": 0.004891210000000001,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 4.7
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2.",
+  "calls": 2,
+  "context_per_call": [
+   19615,
+   19835
+  ],
+  "input_tokens": 39450,
+  "output_tokens": 184,
+  "cost_usd": 0.0054441900000000015,
+  "tools": [
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 3.3
+ }
+]

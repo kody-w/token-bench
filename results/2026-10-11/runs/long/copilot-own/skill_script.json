@@ -1,0 +1,287 @@
+[
+ {
+  "answer": "9 invoices were paid twice, with a total overpayment of 43,228.77. The bundled script and an exact-decimal check agree, and each of the 9 has exactly two payments.",
+  "calls": 5,
+  "context_per_call": [
+   40075
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 179347,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 179347,
+  "output_tokens": 5148,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 32.1
+ },
+ {
+  "answer": "As of 2026-09-30, we charge late fees on 1,933 open invoices totaling $539,531.05 (rounding each fee to the cent before summing would give $539,531.18).",
+  "calls": 4,
+  "context_per_call": [
+   45091
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 159704,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 159704,
+  "output_tokens": 9282,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 48.1
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is **$3,864.80** (19.0 regular hours at $43.67, two 11.5-hour holiday shifts at 2.5x, and a 6.0-hour Sunday shift at 2x). The bundled script returned 3864.8, and an exact-decimal check agrees.",
+  "calls": 4,
+  "context_per_call": [
+   54546
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 184216,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 184216,
+  "output_tokens": 9709,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 46.7
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1: $9,138.49 in tiered commission plus $1,500 in new-logo bonuses, less $4,167.72 in refund clawbacks.",
+  "calls": 4,
+  "context_per_call": [
+   67655
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 217388,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 217388,
+  "output_tokens": 20460,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 96.0
+ },
+ {
+  "answer": "Casey earns $23,873.04 for 2026-Q2: $20,873.04 in tiered commission plus $3,000 for six new-logo bonuses, with no refunds.",
+  "calls": 2,
+  "context_per_call": [
+   64068
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 118008,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 118008,
+  "output_tokens": 11823,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 50.7
+ },
+ {
+  "answer": "9 invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 5,
+  "context_per_call": [
+   39532
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 175195,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 175195,
+  "output_tokens": 6004,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 34.0
+ },
+ {
+  "answer": "We charge late fees on 1,933 open invoices, totaling $539,531.05 as of 2026-09-30.",
+  "calls": 5,
+  "context_per_call": [
+   48882
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 206487,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 206487,
+  "output_tokens": 11352,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 55.3
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 (19 regular hours, two 11.5-hour holiday shifts at 2.5x, and a 6-hour Sunday shift at 2x, after 30-minute breaks on shifts over 6 hours).",
+  "calls": 5,
+  "context_per_call": [
+   54958
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 229483,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 229483,
+  "output_tokens": 11811,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 52.0
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1, on $155,163.01 booked across 13 deals, after $4,167.72 in refund clawbacks.",
+  "calls": 4,
+  "context_per_call": [
+   62637
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 203803,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 203803,
+  "output_tokens": 17538,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 73.2
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2, on $279,306.87 booked across 17 deals.",
+  "calls": 2,
+  "context_per_call": [
+   59048
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 109217,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 109217,
+  "output_tokens": 9885,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 44.6
+ },
+ {
+  "answer": "9 invoices were paid twice, for a total overpayment of 43,228.77. All nine extra payments have out-of-pattern IDs (PAY-30000 to PAY-30008), so they may be duplicate postings rather than real repayments.",
+  "calls": 5,
+  "context_per_call": [
+   39939
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 174780,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 174780,
+  "output_tokens": 8253,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 45.1
+ },
+ {
+  "answer": "As of 2026-09-30, 1,933 open invoices are charged late fees totaling $539,531.05.",
+  "calls": 5,
+  "context_per_call": [
+   48562
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 206830,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 206830,
+  "output_tokens": 10865,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 52.7
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 (19 regular hours at $43.67, 23 holiday hours at 2.5x after breaks, and 6 Sunday hours at 2x). The script and an independent recalculation agree.",
+  "calls": 4,
+  "context_per_call": [
+   51140
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 176746,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 176746,
+  "output_tokens": 11062,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 49.7
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1, on $155,163.01 booked, after $1,500 in new-logo bonuses and a $4,167.72 refund clawback.",
+  "calls": 4,
+  "context_per_call": [
+   56371
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 197067,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 197067,
+  "output_tokens": 13793,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 62.8
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2, on $279,306.87 booked, including $3,000 in new-logo bonuses.",
+  "calls": 2,
+  "context_per_call": [
+   56450
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 105744,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 105744,
+  "output_tokens": 12987,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 60.3
+ }
+]

@@ -1,0 +1,267 @@
+[
+ {
+  "answer": "Nine invoices were paid more than once, and the total overpayment is **$43,228.77** (all payments beyond what each invoice was owed).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 19.5
+ },
+ {
+  "answer": "We charge **$539,531.05** in late fees as of 2026-09-30 across 1,933 invoices, per the brainstem LateFees agent, but I couldn't verify the rule because no fee schedule exists in the data or project and the policy lookup needs a SharePoint sign-in.",
+  "calls": 7,
+  "context_per_call": [
+   27654
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 105831,
+  "brainstem_input_tokens": 27440,
+  "input_tokens": 133271,
+  "output_tokens": 1029,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 18.4
+ },
+ {
+  "answer": "Tanaka's 2026-W14 gross pay is **$3,864.80** per the brainstem OvertimePay agent, but I couldn't verify it: 50.5 hours at $43.67 gives $2,205.34 straight-time or $2,434.60 with time-and-a-half over 40 hours, and the files contain no overtime or holiday-premium rule.",
+  "calls": 6,
+  "context_per_call": [
+   31713
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 120011,
+  "brainstem_input_tokens": 17914,
+  "input_tokens": 137925,
+  "output_tokens": 1058,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 14.6
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is **$6,470.77** per the brainstem Commission agent, but I couldn't verify it because the commission plan rules aren't in the files; the sales file's paid-commission column for those quarter rows sums to $4,167.72.",
+  "calls": 6,
+  "context_per_call": [
+   34948
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 134697,
+  "brainstem_input_tokens": 17840,
+  "input_tokens": 152537,
+  "output_tokens": 989,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 13.7
+ },
+ {
+  "answer": "Casey's 2026-Q2 commission is **$23,873.04** per the brainstem Commission agent (about 8.55% of $279,306.87 across 17 deals), but I couldn't verify the rate because the commission plan isn't in the files.",
+  "calls": 5,
+  "context_per_call": [
+   36503
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 107317,
+  "brainstem_input_tokens": 17826,
+  "input_tokens": 125143,
+  "output_tokens": 724,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 11.1
+ },
+ {
+  "answer": "9 invoices were paid twice, and the total overpayment is $43,228.77 (the amount paid above each invoice's billed amount).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 14.7
+ },
+ {
+  "answer": "Late fees as of 2026-09-30 total $539,531.05 across 1,933 invoices, per the LateFees agent. However, `open_invoices.csv` also contains 1,037 rows marked `paid`, and the tool has no status filter, so this total may include paid invoices. I couldn't confirm the tier rule it applied.",
+  "calls": 8,
+  "context_per_call": [
+   28550
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 107273,
+  "brainstem_input_tokens": 36307,
+  "input_tokens": 143580,
+  "output_tokens": 1422,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 25.9
+ },
+ {
+  "answer": "Tanaka's straight-time gross pay for 2026-W14 is $2,205.34 (50.5 hours \u00d7 $43.67). This assumes no overtime or holiday premium, since the repo has no pay-rule file and two of the shifts are flagged as holidays.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 3,
+  "ok": false,
+  "wall_s": 8.3
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is $6,470.77, according to the Commission agent. I couldn't verify it against a plan rate because the repo has no commission plan, and the sales file's `paid_commission` column only sums to $4,167.72 (on two refund rows), so the two figures don't reconcile.",
+  "calls": 6,
+  "context_per_call": [
+   34488
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 132678,
+  "brainstem_input_tokens": 17749,
+  "input_tokens": 150427,
+  "output_tokens": 996,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 14.4
+ },
+ {
+  "answer": "Casey's 2026-Q2 commission is $23,873.04 according to the Commission agent. That is about 8.5% of Casey's $279,306.87 in Q2 deal value, but the plan rate isn't in the repo, so I couldn't verify it.",
+  "calls": 4,
+  "context_per_call": [
+   35736
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 70442,
+  "brainstem_input_tokens": 17749,
+  "input_tokens": 88191,
+  "output_tokens": 544,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 8.5
+ },
+ {
+  "answer": "Nine invoices were paid twice, and the total overpayment is $43,228.77 (the sum of the duplicate payments beyond each invoice's amount).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 14.0
+ },
+ {
+  "answer": "As of 2026-09-30, the LateFees agent charges $539,531.05 across 1,933 open invoices, though it didn't disclose the fee rule it applied, and the repo contains no written late-fee policy to verify it against.",
+  "calls": 6,
+  "context_per_call": [
+   27448
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 105730,
+  "brainstem_input_tokens": 17812,
+  "input_tokens": 123542,
+  "output_tokens": 913,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 12.9
+ },
+ {
+  "answer": "Tanaka's 2026-W14 gross pay is $3,864.80 per the OvertimePay agent, for 50.5 hours at $43.67 (straight time alone would be $2,205.34). I couldn't verify that figure because the repo has no overtime or holiday policy, and the agent didn't disclose the rules it applied.",
+  "calls": 6,
+  "context_per_call": [
+   30230
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 116227,
+  "brainstem_input_tokens": 17832,
+  "input_tokens": 134059,
+  "output_tokens": 1093,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 15.3
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is $6,470.77 according to the Brainstem Commission agent. I couldn't verify it: the repo has no commission plan, the agent didn't state its rate or say whether duplicate Q1 rows (e.g., the repeated ACME-020, ACME-001, ACME-017, and ACME-010 deals) were removed.",
+  "calls": 5,
+  "context_per_call": [
+   33149
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 96024,
+  "brainstem_input_tokens": 17747,
+  "input_tokens": 113771,
+  "output_tokens": 605,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 9.9
+ },
+ {
+  "answer": "Casey's 2026-Q2 commission is $23,873.04 according to the Brainstem Commission agent. I couldn't confirm the rate, since the repo has no commission plan, but Casey's 17 Q2 rows contain no duplicate entries.",
+  "calls": 4,
+  "context_per_call": [
+   34958
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 68342,
+  "brainstem_input_tokens": 17747,
+  "input_tokens": 86089,
+  "output_tokens": 479,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 9.6
+ }
+]

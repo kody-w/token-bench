@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Context Tax</title>
+<meta name="description" content="What a long AI chat costs in Claude Code, GitHub Copilot CLI and a RAPP Brainstem, measured with the same model on the same questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a lab report. One reading column; charts and tables use the column's full width. */
+:root {
+  --bg: #fcfcfb; --ink: #0b0b0b; --muted: #52514e; --rule: #e3e1dc; --panel: #f3f2ee;
+  --bs: #2a78d6; --cc: #eb6834; --cp: #1baf7a; --accent: #2a78d6;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a19; --ink: #f0efec; --muted: #c3c2b7; --rule: #34332f; --panel: #232321;
+    --bs: #3987e5; --cc: #d95926; --cp: #199e70; --accent: #3987e5; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1a19; --ink: #f0efec; --muted: #c3c2b7; --rule: #34332f; --panel: #232321;
+  --bs: #3987e5; --cc: #d95926; --cp: #199e70; --accent: #3987e5; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 var(--body); }
+main { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 96px; }
+header { border-bottom: 2px solid var(--ink); padding-bottom: 28px; margin-bottom: 36px; }
+.kicker { font: 600 13px/1.4 var(--display); letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+h1 { font: 700 clamp(44px, 9vw, 76px)/0.98 var(--display); letter-spacing: -0.01em; margin: 0 0 16px; text-wrap: balance; }
+.dek { font-size: 21px; line-height: 1.45; color: var(--muted); margin: 0; max-width: 34em; }
+h2 { font: 600 28px/1.15 var(--display); margin: 56px 0 12px; text-wrap: balance; }
+h3 { font: 600 19px/1.3 var(--display); margin: 28px 0 6px; letter-spacing: .01em; }
+p, li { max-width: 40em; }
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+strong { font-weight: 600; }
+code { font: 0.86em var(--mono); background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+.short { background: var(--panel); border-left: 4px solid var(--accent); padding: 18px 22px 10px; margin: 0 0 8px; }
+.short h2 { margin-top: 0; font-size: 20px; }
+figure { margin: 26px 0 30px; }
+figcaption { font: 500 14px/1.45 var(--display); color: var(--muted); margin-top: 8px; letter-spacing: .01em; }
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart .lab { font: 500 14px var(--display); fill: var(--ink); }
+.chart .val { font: 500 14px var(--mono); fill: var(--ink); font-variant-numeric: tabular-nums; }
+.chart .axis { font: 12px var(--mono); fill: var(--muted); }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .mark:hover rect { opacity: .85; }
+.tw { overflow-x: auto; margin: 18px 0 26px; }
+table { border-collapse: collapse; width: 100%; font: 15px/1.4 var(--display); }
+th { text-align: left; font-weight: 600; color: var(--muted); border-bottom: 1.5px solid var(--ink); padding: 8px 10px 6px 0; vertical-align: bottom; }
+td { border-bottom: 1px solid var(--rule); padding: 7px 10px 7px 0; vertical-align: top; }
+table.num td:not(:first-child) { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.num th:not(:first-child) { white-space: nowrap; }
+table td:first-child { min-width: 15em; }
+.note { font: 14px/1.5 var(--display); color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font: 500 14px var(--display); margin: 10px 0 0; }
+.legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+.practice { counter-reset: p; list-style: none; padding: 0; }
+.practice li { counter-increment: p; position: relative; padding-left: 44px; margin: 14px 0; }
+.practice li::before { content: counter(p); position: absolute; left: 0; top: 0; font: 600 15px/1 var(--mono); width: 28px; height: 28px; border: 1.5px solid var(--ink); border-radius: 50%; display: grid; place-items: center; }
+footer { margin-top: 64px; border-top: 1px solid var(--rule); padding-top: 18px; }
+@media (max-width: 520px) { body { font-size: 17px; } .dek { font-size: 19px; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <pattern id="hatch-bs" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="var(--bg)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--bs)" stroke-width="3"/></pattern>
+  <pattern id="hatch-cc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="var(--bg)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--cc)" stroke-width="3"/></pattern>
+  <pattern id="hatch-cp" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="var(--bg)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--cp)" stroke-width="3"/></pattern>
+</defs></svg>
+<main>
+<header>
+  <p class="kicker">token-bench · white paper · October 2026</p>
+  <h1>The Context Tax</h1>
+  <p class="dek">What a long AI chat costs in Claude Code, GitHub Copilot CLI and a RAPP Brainstem, measured with the same model on the same business questions.</p>
+</header>
+
+<section class="short">
+  <h2>The short version</h2>
+  <ul>
+    <li><strong>The host charges before you ask.</strong> To answer "reply with the number 7", a fresh Claude Code sends the model $b_cc tokens and a fresh Copilot CLI sends $b_cp. A Brainstem sends $b_bs.</li>
+    <li><strong>Every question pays that charge again.</strong> Fifteen business questions cost $l_bs tokens in a Brainstem and $l_cc_ss to $l_cc_sk in Claude Code, with the same model and the same rules. The best Claude Code setup used $r_long times as many tokens.</li>
+    <li><strong>Rules belong in code.</strong> Rules written only as instructions were the most expensive setup on both hosts and still got $s_wrong of $s_total answers wrong. Rules written as code were right every time the code actually ran: $code_ok of $code_ran answers.</li>
+    <li><strong>Call the Brainstem directly.</strong> Routed through Copilot CLI and an MCP plugin, the same Brainstem answer cost $r_bridge times as many tokens, and Copilot often skipped the Brainstem altogether.</li>
+    <li><strong>Speed follows weight.</strong> On fresh installs, with the rules in code, all three hosts answered in about four seconds. The same Copilot CLI as the author uses it, with its plugins and servers, took $t_cp_own seconds per answer and $r_cp_own_tok times the tokens.</li>
+    <li><strong>Long chats are expensive, but not exponentially.</strong> Total spend grows with the square of the chat's length: a chat twice as long costs about four times as much.</li>
+  </ul>
+</section>
+
+<figure>
+  $CHART_LONG
+  <figcaption>Input tokens to answer the same 15 business questions, median of 3 runs, Claude Haiku 5.5 on every host. Each setup answered $long_right_min to 45 of 45 questions right; details below.</figcaption>
+</figure>
+
+<h2>What we measured</h2>
+<p>We wrote five small business tasks that each need real rules: a tiered sales commission with clawbacks and a quarterly cap, overtime pay with holiday and Sunday rates, a reorder point with safety stock, late fees with a minimum and a cap, and a check for invoices paid twice. The data is synthetic: about 30,000 rows across nine CSV files.</p>
+<p>Each task was packaged three ways from one Python implementation, so every setup carried exactly the same logic:</p>
+<ul>
+  <li>an <strong>Agent Skill</strong> with the rules written out in its <code>SKILL.md</code>;</li>
+  <li>the same skill with a <strong>bundled script</strong> that implements the rules;</li>
+  <li>a <strong>RAPP <code>agent.py</code></strong> file: a Python class with a description and a <code>perform()</code> method.</li>
+</ul>
+<p>Three hosts answered the same questions: Claude Code (<code>claude -p</code>), GitHub Copilot CLI (<code>copilot -p</code>), and a RAPP Brainstem, a small local server that loads <code>agent.py</code> files and answers on <code>POST /chat</code>. Claude Code and Copilot received the <code>agent.py</code> files as MCP tools. All three ran Claude Haiku 5.5.</p>
+<p>A session asked 15 questions in a row, such as "what commission does Casey earn for 2026-Q2?". Copilot sessions asked the first 5, because each Copilot turn took much longer. Every setup ran 3 times, and every answer was graded against the exact figure, to the cent. We counted <strong>input tokens</strong>: everything sent to the model on every call, cached or not, as each host reports it. Caching lowers the price of repeated context, but the context is still sent, still fills the window and still takes time to read.</p>
+
+<h2>The host charges before you ask</h2>
+<p>Each host sends its own instructions and tool definitions with every model call. We measured that charge with one trivial question.</p>
+<figure>
+  $CHART_BASE
+  <figcaption>Input tokens for "reply with just the number 7", median of 3 runs (1 run for the author's own Brainstem). Solid bars: a fresh setup. Striped bars: the same host as the author uses it every day, with its plugins, MCP servers, skills and memory.</figcaption>
+</figure>
+<p>A fresh Claude Code sends $r_cc_bs times as much as a Brainstem, and a fresh Copilot CLI $r_cp_bs times as much. Nobody keeps a fresh install for long. Every plugin, MCP server, skill and memory file you add is sent again on every call, and a long-used install pays for all of it: $b_cc_real tokens for Claude Code and $b_cp_real for Copilot CLI as the author uses them. The author's own Brainstem, with 22 agents loaded, sends $b_bs_real.</p>
+
+<h2>Every question pays it again</h2>
+<p>A host runs several model calls per question: it reads the question, calls a tool, reads the result, and answers. Each call sends the host's instructions plus the conversation so far.</p>
+<figure>
+  $CHART_TURNS
+  <div class="legend"><span style="--c: var(--cc)">Claude Code, skill + script</span><span style="--c: var(--bs)">Brainstem, /chat</span></div>
+  <figcaption>Input tokens spent on each question in one 15-question session, median of 3 runs.</figcaption>
+</figure>
+<p>The Brainstem's cost per question grows slowly, from about 6k to 12k tokens over 15 questions, because it keeps only the plain text of earlier questions and answers. Tool output never piles up in its history. In a chat that re-sends everything, each new message pays for all the messages before it, so the total grows with the square of the chat's length. That is steep but not exponential. Prompt caching lowers the price of the repeated part. It does not shrink it.</p>
+
+<h2>Rules belong in code</h2>
+<p>How you package the rules mattered less than which host ran them. Rules written only as instructions were the most expensive setup on both hosts, because the model re-reads them and redoes the arithmetic for every question. That arithmetic went wrong on $s_wrong of $s_total answers, by 1 to 180 dollars. Our first wording of the rules was also ambiguous about rounding, and the models filled the gap their own way (see the corrections at the end). Code leaves no such gap.</p>
+$T_PACK
+<p class="note">* Seconds per answer in this table come from runs where up to 18 sessions shared the machine; the clean timing comparison is below. Copilot sessions asked 5 questions, the others 15.</p>
+<h3>Where agent.py won and where it did not</h3>
+<p>In Copilot CLI, <code>agent.py</code> tools were the cheapest setup: $c_ap tokens for 5 questions, against $c_ss for skill plus script and $c_sk for instructions only, with every answer right. In the runs where we recorded its tool calls, Copilot called the <code>agent.py</code> tool on $cp_tool_used of $cp_tool_turns questions.</p>
+<p>In Claude Code, a skill with a bundled script was cheaper than <code>agent.py</code> tools. By default Claude Code hides MCP tools until the model searches for them, and it called the <code>agent.py</code> tool on only $tool_cc_ap of 45 questions; on the rest it read the files and worked the answer out itself. Listing the tools up front made it use them on $tool_cc_al of 45, but every call then carried $b_cc_listed tokens of overhead instead of $b_cc.</p>
+<p>The same <code>agent.py</code> files inside a Brainstem answered all 15 questions for $l_bs tokens, $right_bs right. The format of the file is not what saves tokens. The host that runs it is.</p>
+
+<h2>Lock it in, then clear the chat</h2>
+<p>Once the rules live in code, the conversation history carries little value. Starting a new chat for every question cut the Brainstem's total from $l_bs to $f_bs tokens with every answer still right. In Claude Code and Copilot the saving was small, because their fixed overhead per call dwarfs the history of a 15-question chat. With instructions-only skills, clearing the chat did not fix accuracy ($right_cc_skf right in Claude Code, $right_cp_skf in Copilot), and with Claude Code's default tool search it fell to $right_cc_apf: in a new chat, Claude Code answered $cc_apf_wrong questions from the raw files without calling the <code>agent.py</code> tool, and all of them were wrong.</p>
+
+<h2>Call /chat. Use MCP only when you must.</h2>
+<p>A Brainstem can also be reached from Copilot CLI through the brainstem-mcp plugin. We asked the same questions both ways against the same Brainstem.</p>
+<figure>
+  $CHART_BRIDGE
+  <figcaption>Input tokens per answer from the same Brainstem: called directly, or through Copilot CLI and the plugin (counting only the questions Copilot actually sent to the Brainstem).</figcaption>
+</figure>
+$T_BRIDGE
+<p>Every routed answer still paid Copilot's own overhead several times over, and Copilot often did not route at all. The plugin as shipped (0.2.0) described itself only as "a local AI Brainstem", and Copilot never called it. Version 0.2.1, released during this study, names the Brainstem's agents in its tool description; Copilot then routed $rt_021 of 15 questions on a fresh install. On the author's own install, with many other tools loaded, it routed none. Anything that can make an HTTP request should call <code>POST /chat</code>. The plugin is for hosts that can only speak MCP.</p>
+
+<h2>Time per answer</h2>
+<figure>
+  $CHART_TIME
+  <figcaption>Median seconds per answer over 5 questions, with one session on the machine at a time. Striped: Copilot CLI exactly as the author uses it, with the same agent.py tools.</figcaption>
+</figure>
+<p>On fresh installs, with the rules locked into code, the three hosts answered at about the same speed: $t_ccal seconds for Claude Code with <code>agent.py</code> tools, $t_cp for Copilot CLI and $t_bs for the Brainstem. On a fresh install the Brainstem's advantage is tokens, not seconds: $t_bs_tok for those five questions, against $t_cp_tok for Copilot CLI and $t_ccal_tok for Claude Code.</p>
+<p>Speed is where setup weight shows. The same Copilot CLI as the author uses it every day, with the same <code>agent.py</code> tools and nothing else on the machine, took $t_cp_own seconds per answer and $t_cp_own_tok tokens for the five questions. Claude Code also slowed down whenever it worked an answer out itself instead of running the code.</p>
+
+<h2>The cost of ownership</h2>
+<p>Token prices are the sticker price. The rest of the cost is keeping a setup working. Everything that broke or surprised us while running this study is listed here, including our own mistakes, so the hosts are not blamed for them.</p>
+$T_LEDGER
+<p>Driving one question through each host from a script took $glue_bs lines of code for the Brainstem (one HTTP request), $glue_cc lines and $flags_cc command-line flags for Claude Code, and $glue_cp lines and $flags_cp flags for Copilot CLI. The Claude Code session that ran this study is itself a long chat: by the end of the measurements it had made $sess_calls model calls and sent $sess_tokens tokens of context, about $sess_avg per call.</p>
+
+<h2>Why the Brainstem stays small</h2>
+<ul>
+  <li><strong>A short system prompt.</strong> About 2.8k tokens with five agents loaded.</li>
+  <li><strong>History without tool output.</strong> It keeps the text of earlier questions and answers, capped at 40 messages and 60,000 characters. Raw tool results never re-enter the conversation.</li>
+  <li><strong>Agents answer in code.</strong> An <code>agent.py</code> runs the rules and returns only the result, so the model never re-reads the rules or redoes the arithmetic.</li>
+  <li><strong>Load only what you use.</strong> Agents are files. Drop one into the agents folder and it is available on the next request, with no restart; remove it and it stops costing anything. In our test, adding five agents to a running Brainstem took two seconds.</li>
+</ul>
+
+<h2>Best practices</h2>
+<ol class="practice">
+  <li><strong>Measure your host's idle cost.</strong> Ask it one trivial question and read the input tokens. That number is charged on every model call you make.</li>
+  <li><strong>Put repeated work in code.</strong> If you ask for the same calculation twice, turn it into an <code>agent.py</code> (or a skill with a script). Instructions make the model redo the work and sometimes get it wrong.</li>
+  <li><strong>Keep chats short.</strong> Finish a job, keep the answer, and start a new chat. Spend grows with the square of the chat's length.</li>
+  <li><strong>Unload what you do not use.</strong> Every plugin, MCP server and skill rides along on every call, whether the question needs it or not.</li>
+  <li><strong>Call a Brainstem's <code>/chat</code> directly.</strong> Use the MCP plugin only for a host that cannot make an HTTP request.</li>
+  <li><strong>Give each agent its own named tool.</strong> A single generic "chat" tool hides what the agents do, and hosts skip it.</li>
+  <li><strong>In Claude Code, prefer a skill with a bundled script for repeated work.</strong> Its MCP tools are found by search, and turning search off doubles the overhead of every call.</li>
+</ol>
+
+<h2>What this does not show</h2>
+<ul>
+  <li>One machine, one model (Claude Haiku 5.5), synthetic tasks, and 3 runs per setup. Copilot sessions asked 5 questions, the others 15. Larger models and longer chats may behave differently.</li>
+  <li>We did not test whether long chats make answers worse. Published studies report that accuracy drops as context grows: <a href="https://www.trychroma.com/research/context-rot">Context Rot</a> (Chroma, 2025), <a href="https://arxiv.org/abs/2307.03172">Lost in the Middle</a> (Liu et al., 2023) and <a href="https://arxiv.org/abs/2404.06654">RULER</a> (Hsieh et al., 2024).</li>
+  <li>The Brainstem saves tokens partly by forgetting raw tool output. A later question that needs that output must ask for it again.</li>
+  <li>The Brainstem does not report token usage on <code>/chat</code>, so the bench loads a 15-line counter into its Python process. Claude Code and Copilot CLI report usage themselves.</li>
+  <li>The "as used" measurements describe one person's setup. Yours will differ; the bench measures it in one command.</li>
+</ul>
+
+<h2>Corrections made along the way</h2>
+<p>A reviewer and our own checks caught errors in the first runs. All are fixed, and the runs they spoiled are kept in the repository, marked invalid:</p>
+<ul>
+  <li>Copilot's usage file holds a running total for the whole session. We first read it as per-turn, which overstated Copilot's later turns.</li>
+  <li>Claude Code was first given the MCP server in Copilot's config format. It connected nothing and showed no error, so the first "agent.py in Claude Code" runs had no <code>agent.py</code> tools at all.</li>
+  <li>The first grader matched numbers inside other numbers. It now extracts every number and compares to the cent.</li>
+  <li>Three rules were ambiguous in plain words (same-day ordering, a minimum fee above the cap, a holiday on a Sunday). We wrote the rules out fully and re-ran.</li>
+  <li>A fourth rule did not say whether to round each late fee or only the total. Most of the skill answers we first graded wrong had rounded each fee half-up to the cent, which is a fair reading. The rules also wrote amounts with dollar signs, and Claude Code replaces <code>$$0</code>, <code>$$1</code> and so on inside a <code>SKILL.md</code> with the skill's arguments. We rewrote the rules in words and re-ran every skill setup.</li>
+</ul>
+
+<h2>Run it yourself</h2>
+<p>The bench, the tasks and every run behind this paper are at <a href="https://github.com/kody-w/token-bench">github.com/kody-w/token-bench</a>. It measures your own setup, as you use it, in one command.</p>
+
+<footer>
+  <p class="note">Measured on October 11, 2026 with Claude Code, GitHub Copilot CLI 1.0.95 and the RAPP Brainstem kernel 0.6.16. Data, code and this page: <a href="https://github.com/kody-w/token-bench">kody-w/token-bench</a> (MIT).</p>
+</footer>
+</main>
+</body>
+</html>

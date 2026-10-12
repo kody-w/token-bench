@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+tap/*.jsonl
+tasks/*/results/
+summary.json
+.DS_Store

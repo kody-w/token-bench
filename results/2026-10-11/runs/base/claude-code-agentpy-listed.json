@@ -1,0 +1,53 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   31177
+  ],
+  "input_tokens": 31177,
+  "output_tokens": 3,
+  "cost_usd": 0.006236700000000001,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   31176
+  ],
+  "input_tokens": 31176,
+  "output_tokens": 3,
+  "cost_usd": 0.00149619,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 5.2
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   31178
+  ],
+  "input_tokens": 31178,
+  "output_tokens": 3,
+  "cost_usd": 0.00149659,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 4.0
+ }
+]

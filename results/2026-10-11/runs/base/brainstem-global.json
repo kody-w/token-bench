@@ -1,0 +1,19 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   8716
+  ],
+  "input_tokens": 8716,
+  "model": "claude-haiku-5.5",
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "bs:agentpy#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 1.1
+ }
+]

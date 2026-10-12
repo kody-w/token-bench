@@ -1,0 +1,287 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   23831
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47487,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47487,
+  "output_tokens": 185,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.8
+ },
+ {
+  "answer": "We would charge $539,531.05 in late fees across 1,933 open invoices as of 2026-09-30.",
+  "calls": 2,
+  "context_per_call": [
+   23873
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47522,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47522,
+  "output_tokens": 221,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 3.9
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   24210
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 71804,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 71804,
+  "output_tokens": 505,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 4.9
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1.",
+  "calls": 2,
+  "context_per_call": [
+   23784
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47390,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47390,
+  "output_tokens": 170,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 3.8
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2.",
+  "calls": 2,
+  "context_per_call": [
+   23785
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47392,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47392,
+  "output_tokens": 170,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 3.9
+ },
+ {
+  "answer": "Nine invoices were paid more than once, with a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   23827
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47479,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47479,
+  "output_tokens": 186,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.3
+ },
+ {
+  "answer": "Late fees as of 2026-09-30 total $539,531.05 across 1,933 invoices.",
+  "calls": 2,
+  "context_per_call": [
+   23874
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47524,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47524,
+  "output_tokens": 218,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 5.0
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   24209
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 71797,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 71797,
+  "output_tokens": 507,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 5.2
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1.",
+  "calls": 2,
+  "context_per_call": [
+   23788
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47398,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47398,
+  "output_tokens": 170,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 4.0
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2.",
+  "calls": 2,
+  "context_per_call": [
+   23784
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47390,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47390,
+  "output_tokens": 170,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 3.7
+ },
+ {
+  "answer": "Nine invoices were paid more than once, with a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   23824
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47475,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47475,
+  "output_tokens": 184,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.4
+ },
+ {
+  "answer": "As of 2026-09-30, late fees total $539,531.05 across 1,933 invoices.",
+  "calls": 2,
+  "context_per_call": [
+   23871
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47520,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47520,
+  "output_tokens": 215,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 3.8
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   24244
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 71828,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 71828,
+  "output_tokens": 543,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 4.8
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1.",
+  "calls": 2,
+  "context_per_call": [
+   23782
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47387,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47387,
+  "output_tokens": 169,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 3.2
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2.",
+  "calls": 2,
+  "context_per_call": [
+   23785
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 47393,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 47393,
+  "output_tokens": 169,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy+fresh#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 3.9
+ }
+]

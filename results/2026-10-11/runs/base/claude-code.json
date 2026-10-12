@@ -1,0 +1,98 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15178
+  ],
+  "input_tokens": 15178,
+  "output_tokens": 3,
+  "cost_usd": 0.00140138,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 13.0
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15173
+  ],
+  "input_tokens": 15173,
+  "output_tokens": 3,
+  "cost_usd": 0.0014005700000000003,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 12.6
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15173
+  ],
+  "input_tokens": 15173,
+  "output_tokens": 3,
+  "cost_usd": 0.0014005700000000003,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 12.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15179
+  ],
+  "input_tokens": 15179,
+  "output_tokens": 3,
+  "cost_usd": 0.00140177,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 12.6
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15178
+  ],
+  "input_tokens": 15178,
+  "output_tokens": 3,
+  "cost_usd": 0.0014015700000000002,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 12.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   15175
+  ],
+  "input_tokens": 15175,
+  "output_tokens": 3,
+  "cost_usd": 0.00140097,
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 12.4
+ }
+]

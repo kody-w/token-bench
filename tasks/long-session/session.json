@@ -1,0 +1,172 @@
+{
+ "model": "haiku",
+ "turns": [
+  {
+   "prompt": "Check {d}/invoices.csv against {d}/payments.csv: how many invoices got paid twice and how much did we overpay in total? Answer in one short sentence with the numbers.",
+   "expect": [
+    "9",
+    "43228.77"
+   ],
+   "truth": {
+    "count": 9,
+    "total": 43228.77
+   }
+  },
+  {
+   "prompt": "Using {d}/open_invoices.csv and {d}/customers.csv, what late fees do we charge as of 2026-09-30? Answer in one short sentence with the numbers.",
+   "expect": [
+    "1933",
+    "539531.05"
+   ],
+   "truth": {
+    "as_of": "2026-09-30",
+    "invoices_charged": 1933,
+    "total_fees": 539531.05
+   }
+  },
+  {
+   "prompt": "Using {d}/timesheet.csv and {d}/roster.csv, what is Tanaka's gross pay for 2026-W14? Answer in one short sentence with the numbers.",
+   "expect": [
+    "3864.8"
+   ],
+   "truth": {
+    "employee": "Tanaka",
+    "week": "2026-W14",
+    "gross_pay": 3864.8
+   }
+  },
+  {
+   "prompt": "Using {d}/sales.csv, what commission does Avery earn for 2026-Q1? Answer in one short sentence with the numbers.",
+   "expect": [
+    "6470.77"
+   ],
+   "truth": {
+    "rep": "Avery",
+    "quarter": "2026-Q1",
+    "commission": 6470.77
+   }
+  },
+  {
+   "prompt": "Using {d}/sales.csv, what commission does Casey earn for 2026-Q2? Answer in one short sentence with the numbers.",
+   "expect": [
+    "23873.04"
+   ],
+   "truth": {
+    "rep": "Casey",
+    "quarter": "2026-Q2",
+    "commission": 23873.04
+   }
+  },
+  {
+   "prompt": "Using {d}/demand.csv and {d}/inventory.csv, does SKU-0005 need a reorder, and how many units should we order? Answer in one short sentence with the numbers.",
+   "expect": [
+    "744"
+   ],
+   "truth": {
+    "sku": "SKU-0005",
+    "reorder": true,
+    "order_qty": 744
+   }
+  },
+  {
+   "prompt": "Using {d}/timesheet.csv and {d}/roster.csv, what is Rivera's gross pay for 2026-W12? Answer in one short sentence with the numbers.",
+   "expect": [
+    "1558.74"
+   ],
+   "truth": {
+    "employee": "Rivera",
+    "week": "2026-W12",
+    "gross_pay": 1558.74
+   }
+  },
+  {
+   "prompt": "Using {d}/timesheet.csv and {d}/roster.csv, what is Okafor's gross pay for 2026-W11? Answer in one short sentence with the numbers.",
+   "expect": [
+    "2207.24"
+   ],
+   "truth": {
+    "employee": "Okafor",
+    "week": "2026-W11",
+    "gross_pay": 2207.24
+   }
+  },
+  {
+   "prompt": "Using {d}/sales.csv, what commission does Emery earn for 2026-Q1? Answer in one short sentence with the numbers.",
+   "expect": [
+    "11646.76"
+   ],
+   "truth": {
+    "rep": "Emery",
+    "quarter": "2026-Q1",
+    "commission": 11646.76
+   }
+  },
+  {
+   "prompt": "Using {d}/sales.csv, what commission does Blake earn for 2026-Q2? Answer in one short sentence with the numbers.",
+   "expect": [
+    "15978.25"
+   ],
+   "truth": {
+    "rep": "Blake",
+    "quarter": "2026-Q2",
+    "commission": 15978.25
+   }
+  },
+  {
+   "prompt": "Recheck {d}/invoices.csv against {d}/payments.csv for double payments: count and total overpaid? Answer in one short sentence with the numbers.",
+   "expect": [
+    "9",
+    "43228.77"
+   ],
+   "truth": {
+    "count": 9,
+    "total": 43228.77
+   }
+  },
+  {
+   "prompt": "Using {d}/open_invoices.csv and {d}/customers.csv, what late fees do we charge as of 2026-10-11? Answer in one short sentence with the numbers.",
+   "expect": [
+    "1960",
+    "608521.45"
+   ],
+   "truth": {
+    "as_of": "2026-10-11",
+    "invoices_charged": 1960,
+    "total_fees": 608521.45
+   }
+  },
+  {
+   "prompt": "Using {d}/sales.csv, what commission does Devon earn for 2026-Q2? Answer in one short sentence with the numbers.",
+   "expect": [
+    "14721.09"
+   ],
+   "truth": {
+    "rep": "Devon",
+    "quarter": "2026-Q2",
+    "commission": 14721.09
+   }
+  },
+  {
+   "prompt": "Using {d}/demand.csv and {d}/inventory.csv, does SKU-0004 need a reorder, and how many units should we order? Answer in one short sentence with the numbers.",
+   "expect": [
+    "870"
+   ],
+   "truth": {
+    "sku": "SKU-0004",
+    "reorder": true,
+    "order_qty": 870
+   }
+  },
+  {
+   "prompt": "Using {d}/demand.csv and {d}/inventory.csv, does SKU-0003 need a reorder, and how many units should we order? Answer in one short sentence with the numbers.",
+   "expect": [
+    "720"
+   ],
+   "truth": {
+    "sku": "SKU-0003",
+    "reorder": true,
+    "order_qty": 720
+   }
+  }
+ ]
+}

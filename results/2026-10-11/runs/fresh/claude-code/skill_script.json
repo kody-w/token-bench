@@ -1,0 +1,993 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15283,
+   15874,
+   16078
+  ],
+  "input_tokens": 47235,
+  "output_tokens": 374,
+  "cost_usd": 0.00207881,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 10.2
+ },
+ {
+  "answer": "As of 2026-09-30, we charge late fees on 1,933 open invoices, totaling $539,531.05.",
+  "calls": 3,
+  "context_per_call": [
+   15282,
+   16108,
+   16339
+  ],
+  "input_tokens": 47729,
+  "output_tokens": 510,
+  "cost_usd": 0.00170943,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 12.0
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   15283,
+   16205,
+   16445
+  ],
+  "input_tokens": 47933,
+  "output_tokens": 519,
+  "cost_usd": 0.00173611,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 11.3
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1, per the commission script run on `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15241,
+   16024,
+   16269
+  ],
+  "input_tokens": 47534,
+  "output_tokens": 446,
+  "cost_usd": 0.00166218,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 8.6
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2, per the bundled commission script run against `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15241,
+   16002,
+   16247
+  ],
+  "input_tokens": 47490,
+  "output_tokens": 427,
+  "cost_usd": 0.0016480600000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 7.9
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder: order 744 units.",
+  "calls": 3,
+  "context_per_call": [
+   15284,
+   16003,
+   16219
+  ],
+  "input_tokens": 47506,
+  "output_tokens": 396,
+  "cost_usd": 0.0016274,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 17.4
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is $1,558.74, as computed by the bundled overtime-pay script.",
+  "calls": 3,
+  "context_per_call": [
+   15282,
+   16189,
+   16427
+  ],
+  "input_tokens": 47898,
+  "output_tokens": 520,
+  "cost_usd": 0.00173284,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 5.2
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is **$2,207.24**: 40 regular hours at $30.55, 9 overtime hours at $45.825, and a holiday Sunday of 7.5 hours at $76.375.",
+  "calls": 3,
+  "context_per_call": [
+   15282,
+   16714,
+   17189
+  ],
+  "input_tokens": 49185,
+  "output_tokens": 1218,
+  "cost_usd": 0.00223949,
+  "tools": [
+   "Skill",
+   "Bash",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 9.2
+ },
+ {
+  "answer": "Emery's 2026-Q1 commission is $11,646.76, per the bundled commission script run against the sales CSV.",
+  "calls": 3,
+  "context_per_call": [
+   15241,
+   16028,
+   16273
+  ],
+  "input_tokens": 47542,
+  "output_tokens": 448,
+  "cost_usd": 0.00166402,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 6.2
+ },
+ {
+  "answer": "Blake earns $15,978.25 in commission for 2026-Q2, per the commission script run on the sales CSV.",
+  "calls": 3,
+  "context_per_call": [
+   15241,
+   15992,
+   16238
+  ],
+  "input_tokens": 47471,
+  "output_tokens": 412,
+  "cost_usd": 0.00163866,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 6.1
+ },
+ {
+  "answer": "9 invoices were double-paid, with a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15276,
+   15929,
+   16131
+  ],
+  "input_tokens": 47336,
+  "output_tokens": 433,
+  "cost_usd": 0.0016274800000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 9.4
+ },
+ {
+  "answer": "As of 2026-10-11, 1,960 open past-due invoices are charged late fees totaling $608,521.45.",
+  "calls": 3,
+  "context_per_call": [
+   15282,
+   16050,
+   16281
+  ],
+  "input_tokens": 47613,
+  "output_tokens": 456,
+  "cost_usd": 0.00167025,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 8.3
+ },
+ {
+  "answer": "Devon earns a commission of $14,721.09 for 2026-Q2, as computed by the bundled commission script under the company plan.",
+  "calls": 3,
+  "context_per_call": [
+   15241,
+   15978,
+   16224
+  ],
+  "input_tokens": 47443,
+  "output_tokens": 402,
+  "cost_usd": 0.00163072,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 7.2
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder: order 870 units, per the replenishment policy script.",
+  "calls": 3,
+  "context_per_call": [
+   15284,
+   16027,
+   16241
+  ],
+  "input_tokens": 47552,
+  "output_tokens": 428,
+  "cost_usd": 0.0016480400000000001,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 6.2
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder: order 720 units under the replenishment policy.",
+  "calls": 3,
+  "context_per_call": [
+   15284,
+   16003,
+   16219
+  ],
+  "input_tokens": 47506,
+  "output_tokens": 404,
+  "cost_usd": 0.0016314,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#1",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 6.3
+ },
+ {
+  "answer": "Nine invoices were paid more than once, for a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15291,
+   15972,
+   16375
+  ],
+  "input_tokens": 47638,
+  "output_tokens": 658,
+  "cost_usd": 0.00228127,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 13.2
+ },
+ {
+  "answer": "We charge 1.5% of the invoice amount per started 30 days late, with a $25 minimum and a 10% cap (Gold-tier customers are exempt under 15 days late); as of 2026-09-30, 1,933 open invoices are charged a total of $539,531.05.",
+  "calls": 3,
+  "context_per_call": [
+   15290,
+   16073,
+   16305
+  ],
+  "input_tokens": 47668,
+  "output_tokens": 835,
+  "cost_usd": 0.00186448,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 11.4
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   15291,
+   16193,
+   16500
+  ],
+  "input_tokens": 47984,
+  "output_tokens": 556,
+  "cost_usd": 0.00176519,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 30.0
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1, calculated by the bundled commission script from `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15247,
+   15992,
+   16240
+  ],
+  "input_tokens": 47479,
+  "output_tokens": 413,
+  "cost_usd": 0.0016392400000000001,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 10.1
+ },
+ {
+  "answer": "Casey's commission for 2026-Q2 is $23,873.04, as calculated by the bundled commission script from `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15247,
+   15995,
+   16243
+  ],
+  "input_tokens": 47485,
+  "output_tokens": 415,
+  "cost_usd": 0.00164087,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 6.5
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder: order 744 units.",
+  "calls": 3,
+  "context_per_call": [
+   15292,
+   16005,
+   16222
+  ],
+  "input_tokens": 47519,
+  "output_tokens": 385,
+  "cost_usd": 0.00162222,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 5.6
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is $1,558.74 (per the overtime-pay script).",
+  "calls": 3,
+  "context_per_call": [
+   15290,
+   16220,
+   16570
+  ],
+  "input_tokens": 48080,
+  "output_tokens": 752,
+  "cost_usd": 0.0018774500000000001,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 7.7
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is $2,207.24, as calculated by the bundled overtime-pay script.",
+  "calls": 3,
+  "context_per_call": [
+   15290,
+   16229,
+   16469
+  ],
+  "input_tokens": 47988,
+  "output_tokens": 534,
+  "cost_usd": 0.0017483400000000001,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 7.2
+ },
+ {
+  "answer": "Emery's commission for 2026-Q1 is $11,646.76, per the commission script run on `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15247,
+   15984,
+   16200
+  ],
+  "input_tokens": 47431,
+  "output_tokens": 422,
+  "cost_usd": 0.0016356600000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 7.9
+ },
+ {
+  "answer": "Blake earns a commission of **$15,978.25** for 2026-Q2, per the commission script run against `sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15247,
+   15991,
+   16242
+  ],
+  "input_tokens": 47480,
+  "output_tokens": 470,
+  "cost_usd": 0.00166813,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 6.4
+ },
+ {
+  "answer": "9 invoices were paid more than once, with a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15284,
+   15929,
+   16336
+  ],
+  "input_tokens": 47549,
+  "output_tokens": 625,
+  "cost_usd": 0.00176418,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 15.1
+ },
+ {
+  "answer": "As of 2026-10-11, we charge late fees on 1,960 open past-due invoices, totaling $608,521.45.",
+  "calls": 3,
+  "context_per_call": [
+   15290,
+   16053,
+   16416
+  ],
+  "input_tokens": 47759,
+  "output_tokens": 546,
+  "cost_usd": 0.00174198,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 6.1
+ },
+ {
+  "answer": "Devon earns **$14,721.09** in commission for 2026-Q2, as calculated by the bundled commission script under the company plan.",
+  "calls": 3,
+  "context_per_call": [
+   15247,
+   16001,
+   16373
+  ],
+  "input_tokens": 47621,
+  "output_tokens": 543,
+  "cost_usd": 0.00173093,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 7.5
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder: order 870 units.",
+  "calls": 3,
+  "context_per_call": [
+   15292,
+   16043,
+   16260
+  ],
+  "input_tokens": 47595,
+  "output_tokens": 423,
+  "cost_usd": 0.0016492,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 5.1
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder: order 720 units.",
+  "calls": 3,
+  "context_per_call": [
+   15292,
+   16033,
+   16250
+  ],
+  "input_tokens": 47575,
+  "output_tokens": 413,
+  "cost_usd": 0.0016421000000000003,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#2",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 4.9
+ },
+ {
+  "answer": "Nine invoices were paid twice, with a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15279,
+   15925,
+   16127
+  ],
+  "input_tokens": 47331,
+  "output_tokens": 430,
+  "cost_usd": 0.00211708,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 10.1
+ },
+ {
+  "answer": "As of 2026-09-30, we charge late fees on 1,933 open invoices, totaling $539,531.05.",
+  "calls": 3,
+  "context_per_call": [
+   15278,
+   16076,
+   16308
+  ],
+  "input_tokens": 47662,
+  "output_tokens": 440,
+  "cost_usd": 0.00166806,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 9.9
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 3,
+  "context_per_call": [
+   15279,
+   16189,
+   16429
+  ],
+  "input_tokens": 47897,
+  "output_tokens": 486,
+  "cost_usd": 0.0017164,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 17.0
+ },
+ {
+  "answer": "Avery's commission for 2026-Q1 is $6,470.77, as computed by the bundled commission script from `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15238,
+   16025,
+   16238
+  ],
+  "input_tokens": 47501,
+  "output_tokens": 423,
+  "cost_usd": 0.00164465,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 9.8
+ },
+ {
+  "answer": "Casey's commission for 2026-Q2 is $23,873.04, as computed by the bundled commission script from `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15238,
+   15980,
+   16222
+  ],
+  "input_tokens": 47440,
+  "output_tokens": 408,
+  "cost_usd": 0.0016335000000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 10.1
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder: order 744 units.",
+  "calls": 3,
+  "context_per_call": [
+   15280,
+   16034,
+   16248
+  ],
+  "input_tokens": 47562,
+  "output_tokens": 432,
+  "cost_usd": 0.00165166,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 12.6
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is $1,558.74.",
+  "calls": 3,
+  "context_per_call": [
+   15278,
+   16166,
+   16403
+  ],
+  "input_tokens": 47847,
+  "output_tokens": 486,
+  "cost_usd": 0.00171096,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 7.6
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is $2,207.24.",
+  "calls": 3,
+  "context_per_call": [
+   15278,
+   16160,
+   16395
+  ],
+  "input_tokens": 47833,
+  "output_tokens": 478,
+  "cost_usd": 0.0017053000000000003,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 8.2
+ },
+ {
+  "answer": "Emery's commission for 2026-Q1 is $11,646.76, as calculated by the bundled commission script from the sales CSV.",
+  "calls": 3,
+  "context_per_call": [
+   15238,
+   15986,
+   16228
+  ],
+  "input_tokens": 47452,
+  "output_tokens": 412,
+  "cost_usd": 0.00163676,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 9.8
+ },
+ {
+  "answer": "Blake earns $15,978.25 commission for 2026-Q2, per the bundled commission script run on `data/sales.csv`.",
+  "calls": 3,
+  "context_per_call": [
+   15238,
+   15976,
+   16218
+  ],
+  "input_tokens": 47432,
+  "output_tokens": 402,
+  "cost_usd": 0.0016296600000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 12.7
+ },
+ {
+  "answer": "9 invoices were double-paid, with a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   15272,
+   15866,
+   16068
+  ],
+  "input_tokens": 47206,
+  "output_tokens": 377,
+  "cost_usd": 0.0015864,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 6.4
+ },
+ {
+  "answer": "As of 2026-10-11, we charge late fees on 1,960 open invoices, totaling $608,521.45.",
+  "calls": 3,
+  "context_per_call": [
+   15278,
+   16044,
+   16398
+  ],
+  "input_tokens": 47720,
+  "output_tokens": 546,
+  "cost_usd": 0.0017387400000000003,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 7.2
+ },
+ {
+  "answer": "Devon's commission for 2026-Q2 is $14,721.09, calculated by the bundled commission script under the company plan (tiered rates, discount halving, new-logo bonuses, refund clawbacks, and the $0\u2013$40,000 cap).",
+  "calls": 3,
+  "context_per_call": [
+   15238,
+   16038,
+   16251
+  ],
+  "input_tokens": 47527,
+  "output_tokens": 472,
+  "cost_usd": 0.0016718800000000004,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 9.2
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder: order 870 units, per the replenishment policy script.",
+  "calls": 3,
+  "context_per_call": [
+   15280,
+   15995,
+   16209
+  ],
+  "input_tokens": 47484,
+  "output_tokens": 403,
+  "cost_usd": 0.0016289700000000002,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 5.2
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder: order 720 units.",
+  "calls": 3,
+  "context_per_call": [
+   15280,
+   16016,
+   16228
+  ],
+  "input_tokens": 47524,
+  "output_tokens": 412,
+  "cost_usd": 0.00163748,
+  "tools": [
+   "Skill",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:skill_script+fresh#3",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 5.4
+ }
+]

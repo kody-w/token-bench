@@ -1,0 +1,252 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77 (payments above each invoice's amount).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 38.3
+ },
+ {
+  "answer": "As of 2026-09-30, late fees total $539,531.05 across 1,933 open invoices, per the LateFees agent. The CSVs contain no fee rules, so I couldn't independently verify that figure.",
+  "calls": 5,
+  "context_per_call": [
+   27569
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 79225,
+  "brainstem_input_tokens": 6166,
+  "input_tokens": 85391,
+  "output_tokens": 887,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 20.1
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 per the OvertimePay agent, for 50.5 hours including two holiday days. That's higher than the $2,205.34 straight-time figure, and I couldn't verify the agent's overtime and holiday rules because the data files don't include them.",
+  "calls": 9,
+  "context_per_call": [
+   31415
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 148938,
+  "brainstem_input_tokens": 13161,
+  "input_tokens": 162099,
+  "output_tokens": 1677,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 21.4
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is $6,470.77 according to the Commission agent. The CSV has no rate, but the `paid_commission` column on Avery's Q1 rows totals $4,167.72, so the two figures differ and I couldn't reconcile them.",
+  "calls": 6,
+  "context_per_call": [
+   34402
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 133324,
+  "brainstem_input_tokens": 6002,
+  "input_tokens": 139326,
+  "output_tokens": 939,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 11.5
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2 according to the Commission agent. Casey's Q2 deal sales total $279,306.87 and the CSV's `paid_commission` column is zero, so I couldn't verify the rate behind the agent's figure.",
+  "calls": 4,
+  "context_per_call": [
+   35471
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 70080,
+  "brainstem_input_tokens": 6002,
+  "input_tokens": 76082,
+  "output_tokens": 555,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 8.5
+ },
+ {
+  "answer": "9 invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 26.0
+ },
+ {
+  "answer": "As of 2026-09-30, the LateFees agent reports $539,531.05 in late fees across 1,933 open invoices. I couldn't independently verify this: the repo has no late-fee policy, and the agent didn't disclose its rates or grace periods. The data has 1,963 open invoices, so 30 were excluded for reasons I can't",
+  "calls": 5,
+  "context_per_call": [
+   27974
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 80467,
+  "brainstem_input_tokens": 6142,
+  "input_tokens": 86609,
+  "output_tokens": 1193,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 13.5
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 per the OvertimePay agent. I couldn't verify that figure: the repo has no overtime or holiday rules, and at a flat $43.67/hour his 50.5 hours (24 on holidays) come to $2,205.34, so the premiums must account for the difference.",
+  "calls": 8,
+  "context_per_call": [
+   31531
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 150383,
+  "brainstem_input_tokens": 9831,
+  "input_tokens": 160214,
+  "output_tokens": 1615,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 18.6
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is $6,470.77 per the Commission agent. I couldn't verify it: the repo has no commission rules, and the Q1 refund rows alone sum to $4,167.72 in `paid_commission`.",
+  "calls": 5,
+  "context_per_call": [
+   34167
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 99697,
+  "brainstem_input_tokens": 6006,
+  "input_tokens": 105703,
+  "output_tokens": 640,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 10.0
+ },
+ {
+  "answer": "Casey's 2026-Q2 commission is $23,873.04 according to the Commission agent. I haven't independently verified it, since the repo has no commission rules.",
+  "calls": 4,
+  "context_per_call": [
+   34930
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 69375,
+  "brainstem_input_tokens": 6006,
+  "input_tokens": 75381,
+  "output_tokens": 246,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:brainstem_fixed#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 7.5
+ },
+ {
+  "answer": "Nine invoices were paid twice, and the total overpayment is **$43,228.77** (payments exceeding the invoice amount, which equals the extra payments beyond the first on those nine invoices).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 20.9
+ },
+ {
+  "answer": "I can't give you a late-fee figure. The repo has no late-fee schedule, and the Brainstem LateFees agent is unreachable (its MCP connection rejects the protocol version). Once you share the fee rule (rate, grace period, tier differences), or the Brainstem connection is fixed, I can compute the total ",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 2,
+  "ok": false,
+  "wall_s": 29.3
+ },
+ {
+  "answer": "Tanaka worked 50.5 hours in 2026-W14 at $43.67/hour, so straight-time gross pay is **$2,205.34**. The repo has no overtime or holiday pay rules (two of those days are flagged as holidays), so this excludes any premium.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 3,
+  "ok": false,
+  "wall_s": 8.9
+ },
+ {
+  "answer": "Avery's Q1 2026 commissions recorded as paid total **$4,167.72** ($1,958.31 + $2,209.41 across two rows), but the data has no commission rate, so I can't compute commission earned on her $155,163.01 in Q1 deals.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 4,
+  "ok": false,
+  "wall_s": 9.1
+ },
+ {
+  "answer": "Casey has no commissions recorded as paid for 2026-Q2 ($0.00), and the data has no commission rate, so I can't compute commission earned on Casey's $279,306.87 in Q2 deals.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_fixed#3",
+  "turn": 5,
+  "ok": false,
+  "wall_s": 4.8
+ }
+]

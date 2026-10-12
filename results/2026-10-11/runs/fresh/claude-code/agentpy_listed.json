@@ -1,0 +1,920 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, and the total overpayment is $43,228.77.",
+  "calls": 4,
+  "context_per_call": [
+   31287,
+   31829,
+   32356,
+   33702
+  ],
+  "input_tokens": 129174,
+  "output_tokens": 1509,
+  "cost_usd": 0.00370965,
+  "tools": [
+   "Read",
+   "Read",
+   "Bash",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 19.0
+ },
+ {
+  "answer": "As of 2026-09-30, late fees total $539,531.05 across 1,933 invoices, per the LateFees tool run on open_invoices.csv and customers.csv.",
+  "calls": 2,
+  "context_per_call": [
+   31286,
+   31617
+  ],
+  "input_tokens": 62903,
+  "output_tokens": 322,
+  "cost_usd": 0.00156445,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 11.3
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 (rate $43.67/hr, 50.5 hours, two holiday shifts), per the OvertimePay tool. That's well above a simple 40-hour overtime calculation (about $2,434.60), so the tool's policy likely includes holiday premiums that I can't see from the CSVs.",
+  "calls": 2,
+  "context_per_call": [
+   31284,
+   36836
+  ],
+  "input_tokens": 68120,
+  "output_tokens": 1037,
+  "cost_usd": 0.00345878,
+  "tools": [
+   "Bash",
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 13.3
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31242,
+   31534
+  ],
+  "input_tokens": 62776,
+  "output_tokens": 275,
+  "cost_usd": 0.00152391,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 9.8
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2, according to the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31242,
+   31519
+  ],
+  "input_tokens": 62761,
+  "output_tokens": 261,
+  "cost_usd": 0.0015139100000000003,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 25.3
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder, and you should order 744 units.",
+  "calls": 2,
+  "context_per_call": [
+   31288,
+   31607
+  ],
+  "input_tokens": 62895,
+  "output_tokens": 290,
+  "cost_usd": 0.0015464699999999999,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 5.9
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is $1,558.74, per the overtime policy calculator run on the timesheet and roster.",
+  "calls": 2,
+  "context_per_call": [
+   31286,
+   31631
+  ],
+  "input_tokens": 62917,
+  "output_tokens": 330,
+  "cost_usd": 0.0015712500000000002,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 11.4
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is $2,207.24.",
+  "calls": 2,
+  "context_per_call": [
+   31286,
+   31636
+  ],
+  "input_tokens": 62922,
+  "output_tokens": 314,
+  "cost_usd": 0.00156425,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 7.4
+ },
+ {
+  "answer": "Emery earns a commission of $11,646.76 for 2026-Q1, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31242,
+   31541
+  ],
+  "input_tokens": 62783,
+  "output_tokens": 282,
+  "cost_usd": 0.0015288100000000002,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 39.0
+ },
+ {
+  "answer": "Blake earns a commission of $15,978.25 for 2026-Q2, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31242,
+   31576
+  ],
+  "input_tokens": 62818,
+  "output_tokens": 317,
+  "cost_usd": 0.00155331,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 10.4
+ },
+ {
+  "answer": "9 invoices were paid more than once, with a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   31280,
+   31546
+  ],
+  "input_tokens": 62826,
+  "output_tokens": 250,
+  "cost_usd": 0.0015141900000000001,
+  "tools": [
+   "mcp__agentpy__DoublePaid"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 19.0
+ },
+ {
+  "answer": "We charge $608,521.45 in late fees across 1,960 open invoices as of 2026-10-11.",
+  "calls": 2,
+  "context_per_call": [
+   31286,
+   31585
+  ],
+  "input_tokens": 62871,
+  "output_tokens": 268,
+  "cost_usd": 0.00153105,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 4.4
+ },
+ {
+  "answer": "Devon earns a commission of $14,721.09 for 2026-Q2, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31242,
+   31578
+  ],
+  "input_tokens": 62820,
+  "output_tokens": 319,
+  "cost_usd": 0.00155471,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 7.0
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder: the replenishment policy tool returns `reorder: true` with an order quantity of **870 units**. That is consistent with the inventory file (111 on hand, 0 on order, 5-day lead time) and demand of about 47 units/day, which puts the 111 on hand well below the roughly 235 ",
+  "calls": 2,
+  "context_per_call": [
+   31288,
+   58459
+  ],
+  "input_tokens": 89747,
+  "output_tokens": 824,
+  "cost_usd": 0.00718387,
+  "tools": [
+   "mcp__agentpy__Reorder",
+   "Read",
+   "Read"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 9.5
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder: order 720 units (15 cases of 48, above the 500-unit MOQ), since 163 on hand with nothing on order.",
+  "calls": 2,
+  "context_per_call": [
+   31288,
+   32636
+  ],
+  "input_tokens": 63924,
+  "output_tokens": 634,
+  "cost_usd": 0.00192427,
+  "tools": [
+   "mcp__agentpy__Reorder",
+   "Read"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#1",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 8.6
+ },
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 3,
+  "context_per_call": [
+   31295,
+   31782,
+   32720
+  ],
+  "input_tokens": 95797,
+  "output_tokens": 928,
+  "cost_usd": 0.0028986199999999998,
+  "tools": [
+   "Bash",
+   "Bash"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.8
+ },
+ {
+  "answer": "As of 2026-09-30, late fees total $539,531.05 across 1,933 invoices charged.",
+  "calls": 2,
+  "context_per_call": [
+   31294,
+   31614
+  ],
+  "input_tokens": 62908,
+  "output_tokens": 288,
+  "cost_usd": 0.0015465500000000003,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 10.3
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 2,
+  "context_per_call": [
+   31295,
+   31675
+  ],
+  "input_tokens": 62970,
+  "output_tokens": 344,
+  "cost_usd": 0.00158676,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 20.7
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1, calculated by the company commission tool from `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31248,
+   31594
+  ],
+  "input_tokens": 62842,
+  "output_tokens": 330,
+  "cost_usd": 0.00156309,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 16.0
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31248,
+   31529
+  ],
+  "input_tokens": 62777,
+  "output_tokens": 264,
+  "cost_usd": 0.0015170900000000002,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 15.0
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder, and we should order 744 units (per the replenishment policy tool).",
+  "calls": 2,
+  "context_per_call": [
+   31296,
+   31676
+  ],
+  "input_tokens": 62972,
+  "output_tokens": 362,
+  "cost_usd": 0.0015959700000000002,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 8.1
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is $1,558.74, from 61 hours at $18.78/hr, as calculated by the company overtime tool.",
+  "calls": 3,
+  "context_per_call": [
+   31294,
+   36903,
+   37280
+  ],
+  "input_tokens": 105477,
+  "output_tokens": 546,
+  "cost_usd": 0.00317796,
+  "tools": [
+   "Read",
+   "Read",
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 8.8
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is $2,207.24, calculated with the overtime pay tool from the timesheet and roster files.",
+  "calls": 2,
+  "context_per_call": [
+   31294,
+   31639
+  ],
+  "input_tokens": 62933,
+  "output_tokens": 332,
+  "cost_usd": 0.0015735500000000002,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 14.9
+ },
+ {
+  "answer": "Emery earns a commission of $11,646.76 for 2026-Q1, according to the commission tool run on the sales CSV.",
+  "calls": 2,
+  "context_per_call": [
+   31248,
+   31540
+  ],
+  "input_tokens": 62788,
+  "output_tokens": 273,
+  "cost_usd": 0.0015237900000000001,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 12.9
+ },
+ {
+  "answer": "Blake earns a commission of $15,978.25 for 2026-Q2, per the company commission plan applied to the sales file.",
+  "calls": 2,
+  "context_per_call": [
+   31248,
+   31520
+  ],
+  "input_tokens": 62768,
+  "output_tokens": 252,
+  "cost_usd": 0.0015092900000000004,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 19.0
+ },
+ {
+  "answer": "There are 9 invoices paid more than once, with a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   31288,
+   31547
+  ],
+  "input_tokens": 62835,
+  "output_tokens": 245,
+  "cost_usd": 0.0015115900000000002,
+  "tools": [
+   "mcp__agentpy__DoublePaid"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 12.6
+ },
+ {
+  "answer": "As of 2026-10-11, late fees total $608,521.45 across 1,960 invoices.",
+  "calls": 2,
+  "context_per_call": [
+   31294,
+   31641
+  ],
+  "input_tokens": 62935,
+  "output_tokens": 313,
+  "cost_usd": 0.0015644500000000002,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 27.1
+ },
+ {
+  "answer": "Devon earns a commission of $14,721.09 for 2026-Q2, per the company commission plan applied to the sales CSV.",
+  "calls": 2,
+  "context_per_call": [
+   31248,
+   31538
+  ],
+  "input_tokens": 62786,
+  "output_tokens": 272,
+  "cost_usd": 0.00152289,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 7.3
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder, and the order quantity is 870 units (per the replenishment policy tool).",
+  "calls": 2,
+  "context_per_call": [
+   31296,
+   31701
+  ],
+  "input_tokens": 62997,
+  "output_tokens": 390,
+  "cost_usd": 0.00161497,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 7.0
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder, and the order quantity is 720 units, per the replenishment policy tool.",
+  "calls": 2,
+  "context_per_call": [
+   31296,
+   31660
+  ],
+  "input_tokens": 62956,
+  "output_tokens": 349,
+  "cost_usd": 0.00158627,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#2",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 8.2
+ },
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   31288,
+   31566
+  ],
+  "input_tokens": 62854,
+  "output_tokens": 262,
+  "cost_usd": 0.00201732,
+  "tools": [
+   "mcp__agentpy__DoublePaid"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 22.5
+ },
+ {
+  "answer": "As of 2026-09-30, late fees total $539,531.05 across 1,933 invoices.",
+  "calls": 2,
+  "context_per_call": [
+   31290,
+   31618
+  ],
+  "input_tokens": 62908,
+  "output_tokens": 294,
+  "cost_usd": 0.0020431700000000004,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 35.3
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80.",
+  "calls": 2,
+  "context_per_call": [
+   31291,
+   31665
+  ],
+  "input_tokens": 62956,
+  "output_tokens": 338,
+  "cost_usd": 0.00158191,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 7.9
+ },
+ {
+  "answer": "Avery earns a commission of $6,470.77 for 2026-Q1, per the company commission plan applied to `sales.csv`.",
+  "calls": 2,
+  "context_per_call": [
+   31245,
+   31517
+  ],
+  "input_tokens": 62762,
+  "output_tokens": 255,
+  "cost_usd": 0.0015103500000000001,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 11.3
+ },
+ {
+  "answer": "Casey earns a commission of $23,873.04 for 2026-Q2, per the commission tool run on the sales CSV.",
+  "calls": 2,
+  "context_per_call": [
+   31245,
+   31519
+  ],
+  "input_tokens": 62764,
+  "output_tokens": 254,
+  "cost_usd": 0.0015102499999999999,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 6.1
+ },
+ {
+  "answer": "Yes, SKU-0005 needs a reorder, and the replenishment policy calls for ordering 744 units.",
+  "calls": 2,
+  "context_per_call": [
+   31292,
+   31695
+  ],
+  "input_tokens": 62987,
+  "output_tokens": 384,
+  "cost_usd": 0.00161092,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 6,
+  "ok": true,
+  "wall_s": 9.8
+ },
+ {
+  "answer": "Rivera's gross pay for 2026-W12 is **$1,558.74** (61 hours at $18.78/hr, per the OvertimePay tool; I didn't independently verify the overtime policy behind that figure).",
+  "calls": 2,
+  "context_per_call": [
+   31290,
+   37181
+  ],
+  "input_tokens": 68471,
+  "output_tokens": 1445,
+  "cost_usd": 0.0032386000000000003,
+  "tools": [
+   "Read",
+   "Read",
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 7,
+  "ok": true,
+  "wall_s": 11.4
+ },
+ {
+  "answer": "Okafor's gross pay for 2026-W11 is $2,207.24.",
+  "calls": 2,
+  "context_per_call": [
+   31290,
+   31713
+  ],
+  "input_tokens": 63003,
+  "output_tokens": 387,
+  "cost_usd": 0.0016160000000000002,
+  "tools": [
+   "mcp__agentpy__OvertimePay"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 8,
+  "ok": true,
+  "wall_s": 59.9
+ },
+ {
+  "answer": "Emery earns a commission of $11,646.76 for 2026-Q1, calculated by the company commission tool from the sales.csv file.",
+  "calls": 2,
+  "context_per_call": [
+   31245,
+   31569
+  ],
+  "input_tokens": 62814,
+  "output_tokens": 308,
+  "cost_usd": 0.00154725,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 9,
+  "ok": true,
+  "wall_s": 13.9
+ },
+ {
+  "answer": "Blake earns a commission of $15,978.25 for 2026-Q2, per the company commission plan applied to the sales file.",
+  "calls": 2,
+  "context_per_call": [
+   31245,
+   31529
+  ],
+  "input_tokens": 62774,
+  "output_tokens": 264,
+  "cost_usd": 0.00151725,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 10,
+  "ok": true,
+  "wall_s": 7.6
+ },
+ {
+  "answer": "There are 9 double-paid invoices, with a total overpaid of $43,228.77.",
+  "calls": 2,
+  "context_per_call": [
+   31284,
+   31565
+  ],
+  "input_tokens": 62849,
+  "output_tokens": 266,
+  "cost_usd": 0.0015258399999999999,
+  "tools": [
+   "mcp__agentpy__DoublePaid"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 11,
+  "ok": true,
+  "wall_s": 6.5
+ },
+ {
+  "answer": "As of 2026-10-11, late fees total $608,521.45 across 1,960 invoices.",
+  "calls": 2,
+  "context_per_call": [
+   31290,
+   31606
+  ],
+  "input_tokens": 62896,
+  "output_tokens": 282,
+  "cost_usd": 0.0015421000000000002,
+  "tools": [
+   "mcp__agentpy__LateFees"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 12,
+  "ok": true,
+  "wall_s": 6.5
+ },
+ {
+  "answer": "Devon earns a commission of $14,721.09 for 2026-Q2, per the commission tool run on the sales CSV.",
+  "calls": 2,
+  "context_per_call": [
+   31245,
+   31523
+  ],
+  "input_tokens": 62768,
+  "output_tokens": 258,
+  "cost_usd": 0.00151305,
+  "tools": [
+   "mcp__agentpy__Commission"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 13,
+  "ok": true,
+  "wall_s": 7.6
+ },
+ {
+  "answer": "Yes, SKU-0004 needs a reorder, and the order quantity is 870 units, per the replenishment policy tool.",
+  "calls": 2,
+  "context_per_call": [
+   31292,
+   31670
+  ],
+  "input_tokens": 62962,
+  "output_tokens": 363,
+  "cost_usd": 0.0015954200000000002,
+  "tools": [
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 14,
+  "ok": true,
+  "wall_s": 6.6
+ },
+ {
+  "answer": "Yes, SKU-0003 needs a reorder: order **720 units** (15 cases of 48), per the replenishment policy, against 163 on hand with nothing on order.",
+  "calls": 2,
+  "context_per_call": [
+   31292,
+   58390
+  ],
+  "input_tokens": 89682,
+  "output_tokens": 738,
+  "cost_usd": 0.00712692,
+  "tools": [
+   "Read",
+   "Read",
+   "mcp__agentpy__Reorder"
+  ],
+  "error": null,
+  "failed": false,
+  "lane": "cc:agentpy_visible+fresh#3",
+  "turn": 15,
+  "ok": true,
+  "wall_s": 5.8
+ }
+]

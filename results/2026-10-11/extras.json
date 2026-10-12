@@ -1,0 +1,108 @@
+{
+ "session": {
+  "calls": 261,
+  "tokens": 81737251,
+  "avg": 313169
+ },
+ "glue": {
+  "bs": 13,
+  "cc": 29,
+  "cp": 54
+ },
+ "flags": {
+  "cc": 8,
+  "cp": 9
+ },
+ "ledger": [
+  [
+   "Claude Code",
+   "Given an MCP server in another host's config format, it connected nothing",
+   "No",
+   "Ours (wrong format), host silent"
+  ],
+  [
+   "Claude Code",
+   "Hides MCP tools until the model searches for them; it called the agent.py tool on 13 of 45 questions",
+   "No",
+   "Host default"
+  ],
+  [
+   "Claude Code",
+   "Listing MCP tools up front doubles the tokens of every call (15k to 31k)",
+   "No",
+   "Host design"
+  ],
+  [
+   "Claude Code",
+   "Replaces $0, $1, ... inside a SKILL.md with the skill's arguments, so dollar amounts in rules turned into file paths",
+   "No",
+   "Host design, undocumented for this case"
+  ],
+  [
+   "Copilot CLI",
+   "The usage file is a running total for the session, not per question",
+   "No",
+   "Ours (assumed per question), undocumented"
+  ],
+  [
+   "Copilot CLI",
+   "Your own MCP servers and plugins load into every session; each server must be turned off by name",
+   "No",
+   "Host design"
+  ],
+  [
+   "Copilot CLI",
+   "Skipped the Brainstem plugin's single 'chat' tool on 15 of 15 questions (plugin 0.2.0)",
+   "No",
+   "Plugin (fixed in 0.2.1)"
+  ],
+  [
+   "Copilot CLI",
+   "On a long-used install it skipped the plugin on 10 of 10 questions and took about a minute per answer",
+   "No",
+   "Host with the owner's setup"
+  ],
+  [
+   "Copilot CLI",
+   "From an empty home folder the plugin could not find its environment and offered only a setup tool",
+   "No",
+   "Ours (test setup), plugin"
+  ],
+  [
+   "Copilot CLI",
+   "The plugin connection failed once with 'rejects the protocol version'; 10 direct handshakes all worked",
+   "In the answer",
+   "Unknown"
+  ],
+  [
+   "Brainstem",
+   "/chat does not report token usage; measuring it needed a 15-line counter",
+   "n/a",
+   "Kernel (measurement only)"
+  ],
+  [
+   "Brainstem",
+   "One upstream connection reset came back as HTTP 500 (1 of 30 questions); it does not retry",
+   "Yes",
+   "Model provider; no retry"
+  ],
+  [
+   "Our bench",
+   "The grader matched numbers inside other numbers",
+   "n/a",
+   "Ours"
+  ],
+  [
+   "Our bench",
+   "Four task rules were ambiguous in plain words, including whether to round each late fee",
+   "n/a",
+   "Ours"
+  ],
+  [
+   "Our bench",
+   "A renamed lane skipped its MCP config",
+   "n/a",
+   "Ours"
+  ]
+ ]
+}

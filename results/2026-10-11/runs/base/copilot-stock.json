@@ -1,0 +1,173 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23009
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23009,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23009,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 6.7
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23009
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23009,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23009,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.5
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23011
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23011,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23011,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.7
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23015
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23015,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23015,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 6.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23011
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23011,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23011,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23014
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23014,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23014,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 7.9
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23542
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23542,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23542,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.0
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23536
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23536,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23536,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.0
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   23544
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 23544,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 23544,
+  "output_tokens": 3,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 8.1
+ }
+]

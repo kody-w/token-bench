@@ -1,0 +1,53 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   32297
+  ],
+  "input_tokens": 32297,
+  "output_tokens": 3,
+  "cost_usd": 0.004825370000000001,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:real#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 5.8
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   32295
+  ],
+  "input_tokens": 32295,
+  "output_tokens": 54,
+  "cost_usd": 0.004850470000000001,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:real#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 5.8
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   32295
+  ],
+  "input_tokens": 32295,
+  "output_tokens": 57,
+  "cost_usd": 0.004851970000000001,
+  "tools": [],
+  "error": null,
+  "failed": false,
+  "lane": "cc:real#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 6.0
+ }
+]

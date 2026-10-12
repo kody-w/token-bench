@@ -1,0 +1,72 @@
+[
+ {
+  "answer": "9 invoices were paid twice, for a total overpayment of 43,228.77 (each duplicate equals its full invoice amount).",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_plain#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 49.2
+ },
+ {
+  "answer": "The files contain no late-fee rate or fee charges, so late fees can't be calculated; 1,963 open invoices totaling $12,010,812.31 were past due as of 2026-09-30, based on current status since the files have no payment dates.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_plain#1",
+  "turn": 2,
+  "ok": false,
+  "wall_s": 76.9
+ },
+ {
+  "answer": "Tanaka's 2026-W14 gross pay is **$2,434.60** (50.5 hours: 40 at $43.67 plus 10.5 overtime at 1.5\u00d7), assuming weekly overtime over 40 hours and no holiday premium, since the files define neither; straight time would be $2,205.34.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_plain#1",
+  "turn": 3,
+  "ok": false,
+  "wall_s": 73.5
+ },
+ {
+  "answer": "Avery's recorded 2026-Q1 commission is $4,167.72 ($1,958.31 + $2,209.41, both on refund rows), and sales.csv has no commission rate, so commission earned on the $155,163.01 of Q1 deals can't be calculated.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_plain#1",
+  "turn": 4,
+  "ok": false,
+  "wall_s": 76.8
+ },
+ {
+  "answer": "Casey's 2026-Q2 recorded commission is $0.00 (her 17 deals, totaling $279,306.87, all show zero paid_commission), and sales.csv has no commission rate, so her earned commission can't be calculated.",
+  "calls": 0,
+  "failed": true,
+  "context_per_call": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": null,
+  "error": "not routed: Copilot never called the brainstem: ",
+  "lane": "cp:brainstem_plain#1",
+  "turn": 5,
+  "ok": false,
+  "wall_s": 68.2
+ }
+]

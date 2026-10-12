@@ -1,0 +1,62 @@
+[
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   33719
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 33719,
+  "brainstem_input_tokens": 0,
+  "tools": [],
+  "input_tokens": 33719,
+  "output_tokens": 207,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 23.4
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   33712
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 33712,
+  "brainstem_input_tokens": 0,
+  "tools": [],
+  "input_tokens": 33712,
+  "output_tokens": 199,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 22.0
+ },
+ {
+  "answer": "7",
+  "calls": 1,
+  "context_per_call": [
+   33725
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 33725,
+  "brainstem_input_tokens": 0,
+  "tools": [],
+  "input_tokens": 33725,
+  "output_tokens": 204,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:skill_script#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 22.6
+ }
+]

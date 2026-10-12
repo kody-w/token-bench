@@ -1,0 +1,287 @@
+[
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77.",
+  "calls": 5,
+  "context_per_call": [
+   41197
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 178018,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 178018,
+  "output_tokens": 7088,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 48.3
+ },
+ {
+  "answer": "As of 2026-09-30, we charge $539,531.05 in late fees on 1,933 open invoices (the 10% cap overrides the $25 floor on 32 sub-$250 invoices, a $326.10 effect).",
+  "calls": 6,
+  "context_per_call": [
+   52162
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 262323,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 262323,
+  "output_tokens": 13052,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 64.5
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is $3,864.80 (48.0 paid hours: 19.0 regular, 23.0 holiday at 2.5\u00d7, 6.0 Sunday at 2\u00d7).",
+  "calls": 5,
+  "context_per_call": [
+   61012
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 253165,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 253165,
+  "output_tokens": 18376,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 84.5
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1: $10,638.49 from 13 deals, less $4,167.72 in refund clawbacks.",
+  "calls": 4,
+  "context_per_call": [
+   72321
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 236399,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 236399,
+  "output_tokens": 23115,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 94.8
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2 (17 deals, no refunds, including $3,000 in new-logo bonuses). The company tool and my independent recompute match to the cent.",
+  "calls": 3,
+  "context_per_call": [
+   69347
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 194069,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 194069,
+  "output_tokens": 12130,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#1",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 52.2
+ },
+ {
+  "answer": "Nine invoices were paid twice, and we overpaid by 43,228.77 in total (confirmed by an independent recount).",
+  "calls": 3,
+  "context_per_call": [
+   35742
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 102366,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 102366,
+  "output_tokens": 3048,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 19.9
+ },
+ {
+  "answer": "We charge $539,531.05 in late fees across 1,933 open invoices as of 2026-09-30, per the `agentpy-LateFees` tool. The tool correctly skips `paid` rows, but I couldn't reproduce its fee formula or why 30 of the 1,963 open invoices were excluded.",
+  "calls": 9,
+  "context_per_call": [
+   67249
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 417504,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 417504,
+  "output_tokens": 31227,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 147.9
+ },
+ {
+  "answer": "Tanaka's 2026-W14 gross pay is $3,864.80 (48 paid hours after breaks, with 23 holiday hours at 2.5\u00d7 and 6 Sunday hours at 2\u00d7, per the policy in `overtime_pay_agent.py`).",
+  "calls": 5,
+  "context_per_call": [
+   61447
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 256825,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 256825,
+  "output_tokens": 19312,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 91.3
+ },
+ {
+  "answer": "Avery earns $6,470.77 in commission for 2026-Q1 ($9,138.49 from 13 deals, plus $1,500 in new-logo bonuses, minus $4,167.72 in refund clawbacks).",
+  "calls": 3,
+  "context_per_call": [
+   62060
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 169844,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 169844,
+  "output_tokens": 15338,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 63.4
+ },
+ {
+  "answer": "Casey earns $23,873.04 in commission for 2026-Q2 (17 deals, including $3,000 in six new-logo bonuses, with no refunds). The 30-invoice gap in my earlier late-fee answer is now explained: `late_fees_agent.py` exempts gold invoices under 15 days late, so the $539,531.05 on 1,933 invoices stands.",
+  "calls": 6,
+  "context_per_call": [
+   89177
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 485086,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 485086,
+  "output_tokens": 30898,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#2",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 128.5
+ },
+ {
+  "answer": "Nine invoices were paid twice, for a total overpayment of $43,228.77. The agentpy DoublePaid tool and my independent check agree.",
+  "calls": 4,
+  "context_per_call": [
+   36584
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 137964,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 137964,
+  "output_tokens": 2874,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 1,
+  "ok": true,
+  "wall_s": 20.7
+ },
+ {
+  "answer": "As of 2026-09-30 we charge $539,531.05 in late fees across 1,933 open invoices (independently recalculated from the policy in `late_fees_agent.py`, with 30 gold-customer invoices inside their 15-day grace period excluded).",
+  "calls": 6,
+  "context_per_call": [
+   45940
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 232332,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 232332,
+  "output_tokens": 10394,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 2,
+  "ok": true,
+  "wall_s": 52.0
+ },
+ {
+  "answer": "Tanaka's gross pay for 2026-W14 is **$3,864.80** (19 regular hours, two 11.5-hour holiday shifts at 2.5x, and a 6-hour Sunday at 2x, at $43.67/hr). The OvertimePay tool and my independent recalculation agree.",
+  "calls": 3,
+  "context_per_call": [
+   50011
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 132613,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 132613,
+  "output_tokens": 8062,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 3,
+  "ok": true,
+  "wall_s": 39.1
+ },
+ {
+  "answer": "Avery's 2026-Q1 commission is $6,470.77 (on $155,163.01 in booked deals, after $4,167.72 in refund clawbacks), which matches my independent recalculation.",
+  "calls": 3,
+  "context_per_call": [
+   58610
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 153854,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 153854,
+  "output_tokens": 11599,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 4,
+  "ok": true,
+  "wall_s": 50.3
+ },
+ {
+  "answer": "Casey's 2026-Q2 commission is $23,873.04 (on $279,306.87 in booked deals across 17 sales, with no refunds), which matches the Commission tool and my independent recalculation.",
+  "calls": 3,
+  "context_per_call": [
+   62555
+  ],
+  "model": "claude-haiku-5.5",
+  "host_input_tokens": 171786,
+  "brainstem_input_tokens": 0,
+  "input_tokens": 171786,
+  "output_tokens": 11861,
+  "cost_usd": null,
+  "error": null,
+  "failed": false,
+  "lane": "cp:agentpy#3",
+  "turn": 5,
+  "ok": true,
+  "wall_s": 49.7
+ }
+]
