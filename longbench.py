@@ -64,6 +64,7 @@ def cc_turn(state, prompt, first):
     if not first: cmd += ["--resume", state["sid"]]
     env = dict(os.environ, ENABLE_TOOL_SEARCH="false") if arm == "agentpy_visible" else None
     p = subprocess.run(cmd, cwd=sb, capture_output=True, text=True, timeout=900, env=env)
+    keep_raw(state, "claude-stream.jsonl", p.stdout); keep_raw(state, "claude-command.json", json.dumps(cmd, indent=1))
     calls, seen, ans, out_tok, cost, tools = [], set(), "", 0, 0.0, []
     for line in p.stdout.splitlines():
         try: ev = json.loads(line)
@@ -72,13 +73,13 @@ def cc_turn(state, prompt, first):
             m = ev["message"]
             tools += [b.get("name") for b in m.get("content", []) if b.get("type") == "tool_use"]
             if m.get("id") in seen: continue
-            seen.add(m.get("id")); u = m.get("usage", {})
+            seen.add(m.get("id")); u = m.get("usage", {}); state["model"] = m.get("model", state.get("model"))
             calls.append(u.get("input_tokens", 0) + u.get("cache_creation_input_tokens", 0) + u.get("cache_read_input_tokens", 0))
         elif ev.get("type") == "result":
             state["sid"] = ev.get("session_id", state.get("sid")); ans = ev.get("result") or ""
             out_tok = ev.get("usage", {}).get("output_tokens", 0); cost = ev.get("total_cost_usd", 0)
     return {"answer": ans, "calls": len(calls), "context_per_call": calls, "input_tokens": sum(calls), "output_tokens": out_tok, "cost_usd": cost,
-            "tools": tools, "error": None if ans else p.stderr[-300:]}
+            "tools": tools, "model": state.get("model"), "error": None if ans else p.stderr[-300:]}
 
 _GH = None
 def cp_env(sb):
@@ -106,11 +107,15 @@ def cp_turn(state, prompt, first):
     if not first and state.get("sid"): cmd += [f"--resume={state['sid']}"]
     before = os.path.getsize(state["tap"]) if arm.startswith("brainstem") and os.path.exists(state["tap"]) else 0
     p = subprocess.run(cmd, cwd=sb, capture_output=True, text=True, timeout=900, env=env)
+    keep_raw(state, "copilot-events.jsonl", p.stdout)
+    keep_raw(state, "copilot-command.json", json.dumps([c if c != os.environ.get("GH_TOKEN") else "<token>" for c in cmd], indent=1))
+    if os.path.exists(uf): keep_raw(state, "copilot-usage.json", open(uf).read())
     bs_in = bs_calls = 0
     if arm.startswith("brainstem") and os.path.exists(state["tap"]):
         with open(state["tap"]) as f:
             f.seek(before); us = [json.loads(l)["usage"] for l in f if l.strip()]
         bs_in, bs_calls = sum(u.get("prompt_tokens", 0) for u in us), len(us)
+        keep_raw(state, "brainstem-tap.jsonl", "".join(json.dumps({"usage": u}) + "\n" for u in us))
     ans, tools = "", []
     for line in p.stdout.splitlines():
         try: ev = json.loads(line)
@@ -141,15 +146,25 @@ def bs_turn(state, prompt, first):
     before = os.path.getsize(state["tap"]) if os.path.exists(state["tap"]) else 0
     body = json.dumps({"user_input": prompt, "conversation_history": hist, "session_id": state.setdefault("sid", f"lb-{time.time()}")}).encode()
     req = urllib.request.Request(state["url"] + "/chat", body, {"content-type": "application/json"})
-    d = json.load(urllib.request.urlopen(req, timeout=900)); ans = d.get("response", "")
+    raw = urllib.request.urlopen(req, timeout=900).read(); d = json.loads(raw); ans = d.get("response", "")
+    keep_raw(state, "brainstem-request.json", body.decode()); keep_raw(state, "brainstem-response.json", raw.decode())
     state["history"] += [{"role": "user", "content": prompt}, {"role": "assistant", "content": ans}]
-    with open(state["tap"]) as f: f.seek(before); us = [json.loads(l)["usage"] for l in f if l.strip()]
+    with open(state["tap"]) as f: f.seek(before); tap = f.read()
+    keep_raw(state, "brainstem-tap.jsonl", tap)
+    us = [json.loads(l)["usage"] for l in tap.splitlines() if l.strip()]
     calls = [u.get("prompt_tokens", 0) for u in us]
     if not calls: raise RuntimeError("tap saw no model calls")
     return {"answer": ans, "calls": len(calls), "context_per_call": calls, "input_tokens": sum(calls), "model": d.get("model"),
             "output_tokens": sum(u.get("completion_tokens", 0) for u in us), "cost_usd": None, "error": None}
 
 TURN = {"cc": cc_turn, "cp": cp_turn, "bs": bs_turn}
+RAW = os.environ.get("LB_RAW") == "1"  # keep every host's raw output per question, as evidence
+
+
+def keep_raw(state, name, data):
+    if not (RAW and state.get("raw_dir")): return
+    path = os.path.join(state["raw_dir"], f"q{state['n'] + 1:02d}-{name}")
+    with open(path, "w" if isinstance(data, str) else "wb") as f: f.write(data)
 
 def run_lane(lane, task, session, args):
     host, arm = lane.split("#")[0].split(":")  # "#2" marks a repeat run of the same lane
@@ -161,6 +176,8 @@ def run_lane(lane, task, session, args):
         d = os.path.join(task, "fixtures")
     else:
         state["sb"] = sandbox(task, arm); d = os.path.join(state["sb"], "data")
+    if RAW and args.out:
+        state["raw_dir"] = os.path.join(args.out, "raw", lane.replace(":", "_").replace("#", "_")); os.makedirs(state["raw_dir"], exist_ok=True)
     rows = []
     for i, t in enumerate(session["turns"][:args.turns]):
         state["n"] = i; prompt = t["prompt"].replace("{d}", d); t0 = time.time()
@@ -178,6 +195,21 @@ def run_lane(lane, task, session, args):
     if "sb" in state: shutil.rmtree(state["sb"], ignore_errors=True)
     return rows
 
+def environment(bs_url):
+    """What ran: tool versions, OS, models, settings, and the Brainstem's own report. Stored with every result."""
+    import platform
+    def ver(cmd):
+        try: return subprocess.run(cmd, capture_output=True, text=True, timeout=30).stdout.strip().splitlines()[0]
+        except Exception as e: return f"unavailable: {e}"
+    env = {"utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "platform": platform.platform(), "python": platform.python_version(),
+           "claude": ver(["claude", "--version"]), "copilot": ver([COPILOT, "--version"]), "gh": ver(["gh", "--version"]),
+           "models": MODELS, "brainstem_mcp_plugin": BS_PLUGIN, "brainstem_mcp_plugin_compare": BS_PLUGIN_FIXED,
+           "settings": {k: v for k, v in os.environ.items() if k.startswith("LB_") or k == "ENABLE_TOOL_SEARCH"}}
+    try: env["brainstem_health"] = json.load(urllib.request.urlopen(bs_url + "/health", timeout=5))
+    except Exception: env["brainstem_health"] = None
+    return env
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("task"); ap.add_argument("--lanes", required=True)
     ap.add_argument("--turns", type=int, default=99); ap.add_argument("--bs-url", default="http://127.0.0.1:7098")
@@ -187,7 +219,8 @@ def main():
     print(f"longbench: {len(lanes)} lanes x {min(a.turns, len(session['turns']))} turns, all lanes at once", flush=True)
     with ThreadPoolExecutor(len(lanes)) as ex: res = list(ex.map(lambda l: run_lane(l, task, session, a), lanes))
     od = a.out or os.path.join(task, "results", time.strftime("%Y%m%d-%H%M%S")); os.makedirs(od, exist_ok=True)
-    json.dump({"lanes": lanes, "models": MODELS, "rows": [r for rs in res for r in rs]}, open(os.path.join(od, "long.json"), "w"), indent=1)
+    json.dump({"lanes": lanes, "models": MODELS, "environment": environment(a.bs_url), "argv": sys.argv,
+               "rows": [r for rs in res for r in rs]}, open(os.path.join(od, "long.json"), "w"), indent=1)
     for rs in res:
         if rs: print(f"{rs[0]['lane']:<16} right {sum(r['ok'] for r in rs)}/{len(rs)}  calls {sum(r['calls'] for r in rs)}  input {sum(r['input_tokens'] for r in rs):,}  last-turn peak {max(rs[-1]['context_per_call'] or [0]):,}")
     print("out:", od)
